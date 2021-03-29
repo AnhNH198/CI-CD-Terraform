@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  subscription: Microsoft Azure Sponsorship 6k (7d292bf3-ccaf-46d1-aede-7778d3c017b4)
+  subscription: Microsoft Azure Sponsorship 6k(7d292bf3-ccaf-46d1-aede-7778d3c017b4)
   resourceGroup: anhnh-tfstate
   storageAccount: anhnhtfstate
   container: tfstate

@@ -9,7 +9,7 @@ variables:
   resourceGroup: anhnh-tfstate
   storageAccount: anhnhtfstate
   container: tfstate
-  tfstateFile: terraform.tfstate
+  tfstateFile: XMLIGU7pq8ZnpccLBvRzFZxnn/6S46Z6MOhAX4yHGOt4Vpg9GF1VbH9RfdfLHtSsua2zEjsnfPBd0ywPIEnvxg==
   anyTfChanges: false
 
 steps:
@@ -25,6 +25,10 @@ steps:
       command: 'init'
       workingDirectory: '$(System.DefaultWorkingDirectory)/terraform'
       backendServiceArm: '$(subscription)'
+      backendAzureRmResourceGroupName: '$(resourceGroup)'
+      backendAzureRmStorageAccountName: '$(storageAccount)'
+      backendAzureRmContainerName: '$(container)'
+      backendAzureRmKey: '$(tfstateFile)'
   
   - task: TerraformTaskV1@0
     displayName: terraform plan -out=tfplan
